@@ -1,0 +1,43 @@
+/* Estilo do botão flutuante (o link em si) */
+.float-whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366; /* Verde oficial do WhatsApp */
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10000; /* Garante que ele fique na frente de tudo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+}
+
+/* Efeito de passar o mouse por cima (Hover) */
+.float-whatsapp:hover {
+    background-color: #128c7e; /* Verde mais escuro */
+    transform: scale(1.1); /* Dá um leve zoom */
+}
+
+/* Tamanho do ícone SVG dentro do botão */
+.my-float-whatsapp {
+    width: 35px;
+    height: 35px;
+}
+
+/* Animação opcional: Pulsação (Chama mais atenção do cliente) */
+@keyframes pulsar {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.float-whatsapp {
+    animation: pulsar 2s infinite;
+}
